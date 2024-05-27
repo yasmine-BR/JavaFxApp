@@ -1,0 +1,210 @@
+.root-center{
+
+-fx-background-image: url("images/isetkr1.jpeg");
+ -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+}
+.menu-gauche{
+    -fx-background-color: #F8AD22;
+}
+.label-menu-gauche{
+    -fx-font-size: 19.0 pt;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: #19519d;
+    -fx-font-weight: bold;
+
+}
+
+.label-form{
+    -fx-font-size: 12.0 pt;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: #F8AD22;
+    -fx-font-weight: bold;
+
+}
+.vbox-ar{
+    -fx-background-color: white;
+}
+.pane-rech{
+    -fx-background-color: white;
+    -fx-border-color:#F8AD22 ;
+    -fx-border-width:2px;
+    -fx-border-radius: 30px;
+}
+.titre-inner-vbox{
+    -fx-font-size: 22.0 pt;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: #F8AD22;
+    -fx-font-weight: bold;
+
+}
+.btn-inner-vbox:hover{
+    -fx-background-color:  #19519d ;
+    -fx-text-fill: white;
+    -fx-border-radius: 20px;
+    -fx-border-color: #60c2cb ;
+    -fx-border-width: 3px;
+}
+.btn-inner-vbox{
+    -fx-background-color:  white ;
+    -fx-border-color: #60c2cb ;
+    -fx-border-width: 3px;
+    -fx-font-size: 13.0 pt;
+    -fx-text-fill: #F8AD22;
+    -font-style:bold ;
+    -fx-border-radius: 20px;
+
+}
+.btn-bottom-vbox{
+    -fx-background-color:  #F8AD22 ;
+    -fx-font-size: 13.0 pt;
+    -fx-text-fill: #19519d;
+    -font-style:bold ;
+
+}
+.btn-slide{
+    -fx-background-color: transparent;
+
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+  
+}
+.btn-slide:hover{
+    -fx-border-width: 2px;
+    -fx-opacity: .7;
+}
+.white-pane{
+    -fx-background-color: #fff;
+}
+.tf-box{
+    -fx-background-color: transparent;
+    -fx-border-color: #dedee4;
+    -fx-border-width: 0px 0px 1px 0px; 
+}
+.tf{
+    -fx-background-color: transparent;
+    
+}
+.pink-btn{
+    -fx-background-color: #8c42f7;
+
+    -fx-text-fill: #fff;
+}
+
+.btn{
+    -fx-text-fill: #fff;
+}
+.btn:hover{
+    -fx-background-color: #00c853;
+    -fx-text-fill: #fff;
+    -fx-text-alignment: center;
+}
+.cb-chercher-par{
+    -fx-border-color:  #19519d ;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-text-fill: #19519d;
+    -fx-font-style: bold;
+    -fx-font-size: 13.0 pt;
+    -fx-font-family: "Bookman Old Style";
+    -fx-border-radius: 20;
+}
+.menu-bar {
+    -fx-background-color:  #19519d ;
+
+    -fx-border-width: 2.0;
+
+}
+.titre-bib{
+    -fx-background-color:  #60c2cb ;
+    -fx-font-size: 30.0 pt;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: #19519d;
+    -fx-font-weight: bold;
+}
+.menu-bar .label {
+    -fx-font-size: 19.0 pt;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: #F8AD22;
+    -fx-font-weight: bold;
+
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background:  #19519d ;
+
+    -fx-text-fill: #F8AD22;
+}
+.table-row-cell:selected .text {
+
+-fx-fill: #19519d ;
+
+}
+.table-view .column-header-background{
+    -fx-background-color : -hlight-gradient;
+
+
+}
+.table-view{
+    -fx-background-color: white;
+
+    -fx-border-color:#19519d ;
+    -fx-border-width:2px ;
+}
+.table-view .column-header {
+    -fx-background-color : transparent ;
+
+    -fx-fill: #19519d;
+     -fx-font-size: 14.0 pt;
+}
+.row-cell.label{
+     -fx-text-fill:  #F8AD22;
+     -fx-font-size: 19.0 pt;
+      -fx-background:  black ;
+}
+.tableColumn{
+     -fx-text-fill:  #19519d;
+     -fx-font-size: 14.0 pt;
+      -fx-background:  #60c2cb ;
+}
+.tableView.label:selected{
+    -fx-text-fill:  #60c2cb;
+     -fx-font-size: 19.0 pt;
+      -fx-background:  grey ;
+}
+.menu-item {
+
+    -fx-text-fill: #19519d;
+     -fx-font-size: 19.0 pt;
+    -fx-background: #F8AD22 ;
+}
+.menu-item .label{
+    -fx-font-size: 19.0 pt;
+    -fx-text-fill: #19519d;
+}
+.menu-item .label:hover{
+    -fx-font-size: 19.0 pt;
+    -fx-background: #F8AD22 ;
+    -fx-text-fill: white;
+}
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color:white ;
+    -fx-border-width: 0.2px;
+    -fx-border-color: black;
+}
+.btn:focused{
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-text-fill: #fff;
+}
+.focused{
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-text-fill: #fff;
+}
+.tbColumn .label{
+    -fx-text-fill: #f20d0d;
+      -fx-font-size: 19.0 pt;
+      -fx-font-weigth: bold;
+    -fx-text-alignment: right;
+  
+}

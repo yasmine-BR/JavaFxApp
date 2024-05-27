@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.gestionbibliotheque.model.EmpruntsEntity" table="emprunts" schema="bibliotheque">
+        <id name="empruntid">
+            <column name="empruntid" sql-type="int(11)"/>
+        </id>
+        <property name="livreid">
+            <column name="livreid" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="adherentcin">
+            <column name="adherentcin" sql-type="int(8)"/>
+        </property>
+        <property name="dateemprunt">
+            <column name="dateemprunt" sql-type="date" not-null="true"/>
+        </property>
+        <property name="dateretourprevue">
+            <column name="dateretourprevue" sql-type="date" not-null="true"/>
+        </property>
+        <property name="dateretoureffective">
+            <column name="dateretoureffective" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

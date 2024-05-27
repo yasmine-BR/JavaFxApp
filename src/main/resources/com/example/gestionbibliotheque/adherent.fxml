@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="811.0" styleClass="vbox-ar" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionbibliotheque.AdherentController">
+   <center>
+      <TableView fx:id="adherentTable" minWidth="332.0" onMouseClicked="#displayDetails" onSort="#displayDetails" prefHeight="276.0" prefWidth="451.0" style="-fx-border-radius: 30;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colcin" prefWidth="71.99999696016312" text="CIN" />
+          <TableColumn fx:id="colnom" prefWidth="91.9999771118164" text="Nom" />
+            <TableColumn fx:id="colprenom" prefWidth="110.39996337890625" text="Prénom" />
+            <TableColumn fx:id="colfonction" prefWidth="118.4000244140625" text="Fonction" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <right>
+      <VBox alignment="CENTER" prefHeight="286.0" prefWidth="376.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </BorderPane.margin>
+         <children>
+            <GridPane vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.79998779296875" minWidth="10.0" prefWidth="126.39996337890625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.20001220703125" minWidth="10.0" prefWidth="249.60003662109375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.79996337890623" minHeight="10.0" prefHeight="19.199987792968756" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.600012207031227" minHeight="10.0" prefHeight="25.600012207031227" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-form" text="Cin" />
+                  <Label styleClass="label-form" text="Nom &amp; prénom" GridPane.rowIndex="1" />
+                  <Label styleClass="label-form" text="Date inscription" GridPane.rowIndex="2" />
+                  <Label styleClass="label-form" text="Fonction " GridPane.rowIndex="3" />
+                  <Button fx:id="submitbtnfx" mnemonicParsing="false" prefHeight="28.0" prefWidth="97.0" styleClass="btn-bottom-vbox" text="Enregistrer" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets top="7.0" />
+                     </GridPane.margin></Button>
+                  <Button fx:id="resetbtnfx" mnemonicParsing="false" onAction="#clearForm" prefHeight="30.0" prefWidth="94.0" styleClass="btn-bottom-vbox" text="Annuler" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets top="7.0" />
+                     </GridPane.margin></Button>
+                  <TextField fx:id="cinfx" onMouseClicked="#displayDetails" prefHeight="26.0" prefWidth="138.0" GridPane.columnIndex="1" />
+                  <DatePicker fx:id="datefx" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="label-form" text="Téléphone &amp; Email" GridPane.rowIndex="4" />
+                  <Label layoutX="10.0" layoutY="138.0" styleClass="label-form" text="Département" GridPane.rowIndex="5" />
+                  <Label layoutX="10.0" layoutY="164.0" styleClass="label-form" text="Adresse" GridPane.rowIndex="6" />
+                  <TextArea fx:id="adressefx" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="nomfx" />
+                        <TextField fx:id="prenomfx" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <TextField fx:id="telfx" prefHeight="26.0" prefWidth="111.0" />
+                        <TextField fx:id="emailfx" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <children>
+                        <RadioButton fx:id="ensbtnfx" mnemonicParsing="false" text="Enseignant">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="fonction" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="etudbtnfx" mnemonicParsing="false" text="Etudiant" toggleGroup="$fonction" />
+                        <RadioButton fx:id="adminbtnfx" mnemonicParsing="false" text="Administratif" toggleGroup="$fonction" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <children>
+                        <RadioButton fx:id="tibtnfx" mnemonicParsing="false" text="TI">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="departement" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="gebtnfx" mnemonicParsing="false" text="GE" toggleGroup="$departement" />
+                        <RadioButton fx:id="segbtnfx" mnemonicParsing="false" text="SEG" toggleGroup="$departement" />
+                        <RadioButton fx:id="gmbtnfx" mnemonicParsing="false" text="GM" toggleGroup="$departement" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <VBox prefHeight="118.0" prefWidth="742.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="814.0" styleClass="titre-inner-vbox" text="Gestion des adhérents">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="742.0" spacing="20.0" styleClass="pane-rech">
+               <children>
+                  <ComboBox fx:id="dropdownfx" prefWidth="150.0" promptText="Chercher par:" styleClass="cb-chercher-par" />
+                  <TextField fx:id="chercherfx">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="showfx" mnemonicParsing="false" prefHeight="28.0" prefWidth="97.0" styleClass="btn-bottom-vbox" text="afficher" />
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#displayDetails" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="nvadbtn" mnemonicParsing="false" prefHeight="34.0" prefWidth="173.0" styleClass="btn-inner-vbox" text="Nouveau Adhérent">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="supadbtn" mnemonicParsing="false" onAction="#deleteAdherent" prefHeight="34.0" prefWidth="172.0" styleClass="btn-inner-vbox" text="Supprimer Adhérent">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="affadbtn" mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" styleClass="btn-inner-vbox" text="Affecter Emprunt" textFill="#d43c3c">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="110.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="0.0" prefWidth="662.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="200.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

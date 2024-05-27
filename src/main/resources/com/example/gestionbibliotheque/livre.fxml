@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="821.0" styleClass="vbox-ar" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView prefHeight="333.0" prefWidth="521.0" style="-fx-border-radius: 30;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="128.79999113082886" text="Titre" />
+          <TableColumn prefWidth="143.19996643066406" text="ISBN" />
+            <TableColumn minWidth="0.0" prefWidth="128.0" text="Date.Publication" />
+            <TableColumn prefWidth="116.79995727539062" text="Nb.Exemplaires" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <right>
+      <VBox alignment="CENTER" prefHeight="333.0" prefWidth="271.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </BorderPane.margin>
+         <children>
+            <GridPane prefHeight="346.0" prefWidth="271.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.800048828125" minWidth="10.0" prefWidth="115.20001220703125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.4000244140625" minWidth="10.0" prefWidth="155.99998779296874" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-form" text="Titre" />
+                  <Label styleClass="label-form" text="ISBN" GridPane.rowIndex="1" />
+                  <Label styleClass="label-form" text="Date publication" GridPane.rowIndex="2" />
+                  <Label styleClass="label-form" text="Nb.Exemplaires" GridPane.rowIndex="3" />
+                  <Label styleClass="label-form" text="Catégorie" GridPane.rowIndex="7" />
+                  <Label styleClass="label-form" text="Auteur" GridPane.rowIndex="5" />
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="97.0" styleClass="btn-bottom-vbox" text="Enregistrer" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" styleClass="btn-bottom-vbox" text="Annuler" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox prefHeight="26.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <Label layoutX="10.0" layoutY="215.0" styleClass="label-form" text="Maison d'édition" GridPane.rowIndex="6" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <VBox prefHeight="132.0" prefWidth="822.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="814.0" styleClass="titre-inner-vbox" text="Gestion des Livres">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="742.0" spacing="10.0" styleClass="pane-rech">
+               <children>
+                  <ComboBox prefHeight="29.0" prefWidth="150.0" promptText="Chercher par:" styleClass="cb-chercher-par" />
+                  <TextField>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="97.0" styleClass="btn-bottom-vbox" text="afficher" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="132.0" styleClass="btn-inner-vbox" text="Nouveau Livre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" styleClass="btn-inner-vbox" text="Supprimer Livre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="172.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="134.0" styleClass="cb-chercher-par" text="Emprunter">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
